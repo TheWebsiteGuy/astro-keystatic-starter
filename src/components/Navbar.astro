@@ -27,20 +27,20 @@ const links = navbarSettings?.links || []
           </div>
           <ul
             tabindex="0"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-96 p-2 shadow">
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-96 p-2 shadow">
             {links.map((link) => (
               <li>
                 {link.isDropdown.discriminant ? (
                   <>
-                    <a>{link.text}</a>
-                    <ul class="p-2">
-                      {link.isDropdown.value.map((sublink) => (
-                          
-                        <li>
-                          <a href={sublink.link}>{sublink.text}</a>
-                        </li>
-                      ))}
-                    </ul>
+                    <details>
+                      <summary>{link.text}</summary>
+                      <ul class="p-2">
+                        {link.isDropdown.value.map((sublink) => (
+                          <li>
+                            <a href={sublink.link}>{sublink.text}</a>
+                          </li>
+                        ))}
+                      </ul>
                     </details>
                   </>
                 ) : (
@@ -48,33 +48,33 @@ const links = navbarSettings?.links || []
                 )}
               </li>
             ))}
-            
+          </ul>
         </div>
         <a href="/" aria-label={branding.site.siteName} class="btn btn-ghost text-xl">{branding.site.siteName}</a>
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 ">
           {links.map((link) => (
-              <li>
-                {link.isDropdown.discriminant ? (
-                  <>
-                    <details>
-                      <summary>{link.text}</summary>
+            <li>
+              {link.isDropdown.discriminant ? (
+                <>
+                  <details>
+                    <summary>{link.text}</summary>
                     <ul class="p-2">
                       {link.isDropdown.value.map((sublink) => (
-                          
                         <li>
                           <a href={sublink.link}>{sublink.text}</a>
                         </li>
                       ))}
                     </ul>
-                    </details>
-                  </>
-                ) : (
-                  <a href={link.isDropdown.value.link}>{link.text}</a>
-                )}
-              </li>
-            ))}
+                  </details>
+                </>
+              ) : (
+                <a href={link.isDropdown.value.link}>{link.text}</a>
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
       <div class="navbar-end">
           {

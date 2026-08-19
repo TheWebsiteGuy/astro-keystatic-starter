@@ -3,21 +3,21 @@
   "version": "0.0.38",
   "license": "MIT",
   "dependencies": {
-    "@astrojs/markdoc": "^1.0.3",
-    "@astrojs/react": "^5.0.3",
-    "@keystatic/astro": "^5.0.6",
-    "@keystatic/core": "^0.5.48",
-    "@tailwindcss/postcss": "^4.2.1",
-    "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.2.1",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "astro": "^6.1.4",
-    "daisyui": "^5.5.19",
-    "marked": "^17.0.3",
-    "postcss": "^8.5.6",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "@astrojs/markdoc": "^2.0.7",
+    "@astrojs/react": "^6.0.3",
+    "@keystatic/astro": "^5.2.0",
+    "@keystatic/core": "^0.5.51",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "astro": "^7.2.3",
+    "daisyui": "^5.7.19",
+    "marked": "^17.0.6",
+    "postcss": "^8.5.26",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "tailwindcss": "^4.1.4"
   },
   "scripts": {
@@ -28,7 +28,7 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "prettier": "^3.8.1",
+    "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.14"
   }
